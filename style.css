@@ -96,3 +96,12 @@ footer {
   padding: 20px;
   background: #eee;
 }
+.fake-img {
+  height: 160px;
+  background: linear-gradient(120deg, #66bb6a, #43a047);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}

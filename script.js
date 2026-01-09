@@ -1,7 +1,7 @@
 const products = [
-  { name: "Phân NPK 16-16-8", price: 250000, img: "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c" },
-  { name: "Phân Ure Phú Mỹ", price: 220000, img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449" },
-  { name: "Thuốc trừ sâu sinh học", price: 180000, img: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3" }
+  { name: "Phân NPK 16-16-8", price: 250000 },
+  { name: "Phân Ure Phú Mỹ", price: 220000 },
+  { name: "Thuốc trừ sâu sinh học", price: 180000 }
 ];
 
 const list = document.getElementById("products");
@@ -17,12 +17,14 @@ function renderProducts() {
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `
-      <img src="${p.img}">
+      <div class="fake-img">🌱</div>
       <div class="info">
         <h3>${p.name}</h3>
-        <p>${p.price.toLocaleString()} đ</p>
+        <p>${p.price.toLocaleString()} đ / bao</p>
       </div>
-      <button onclick="addToCart('${p.name}', ${p.price})">Thêm vào giỏ</button>
+      <button onclick="addToCart('${p.name}', ${p.price})">
+        Thêm vào giỏ
+      </button>
     `;
     list.appendChild(div);
   });
@@ -49,6 +51,19 @@ function renderCart() {
   });
   totalEl.innerText = total.toLocaleString();
   countEl.innerText = "🛒 " + cart.length;
+}
+
+function orderViaZalo() {
+  let message = "Đơn hàng Cây Trồng Cuộc Sống:%0A";
+  cart.forEach(i => {
+    message += `- ${i.name}: ${i.price.toLocaleString()} đ%0A`;
+  });
+  message += `Tổng: ${totalEl.innerText} đ`;
+
+  window.open(
+    "https://zalo.me/0948469054?text=" + message,
+    "_blank"
+  );
 }
 
 renderProducts();
