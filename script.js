@@ -1,16 +1,16 @@
 const products = [
-  { name: "Phân NPK 16-16-8", price: 250000 },
-  { name: "Phân NPK 20-20-15", price: 280000 },
-  { name: "Phân Ure Phú Mỹ", price: 220000 },
-  { name: "Phân DAP Đình Vũ", price: 310000 },
-  { name: "Phân Kali Canada", price: 300000 },
-  { name: "Phân Hữu Cơ Vi Sinh", price: 180000 },
-  { name: "Phân Bón Lá Siêu Lớn Trái", price: 150000 },
-  { name: "Phân Bón Lá Siêu Ra Rễ", price: 160000 },
-  { name: "Thuốc Trừ Sâu Sinh Học", price: 180000 },
-  { name: "Thuốc Trừ Bệnh Thán Thư", price: 190000 },
-  { name: "Thuốc Kích Thích Ra Hoa", price: 170000 },
-  { name: "Thuốc Trừ Cỏ Chọn Lọc", price: 210000 }
+  { name: "Phân NPK 16-16-8", price: 250000, category: "phan-bon" },
+  { name: "Phân NPK 20-20-15", price: 280000, category: "phan-bon" },
+  { name: "Phân Ure Phú Mỹ", price: 220000, category: "phan-bon" },
+  { name: "Phân DAP Đình Vũ", price: 310000, category: "phan-bon" },
+  { name: "Phân Kali Canada", price: 300000, category: "phan-bon" },
+  { name: "Phân Hữu Cơ Vi Sinh", price: 180000, category: "phan-bon" },
+  { name: "Phân Bón Lá Siêu Lớn Trái", price: 150000, category: "phan-bon" },
+  { name: "Phân Bón Lá Siêu Ra Rễ", price: 160000, category: "phan-bon" },
+  { name: "Thuốc Trừ Sâu Sinh Học", price: 180000, category: "thuoc" },
+  { name: "Thuốc Trừ Bệnh Thán Thư", price: 190000, category: "thuoc" },
+  { name: "Thuốc Kích Thích Ra Hoa", price: 170000, category: "thuoc" },
+  { name: "Thuốc Trừ Cỏ Chọn Lọc", price: 210000, category: "thuoc" }
 ];
 
 
